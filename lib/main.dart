@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/home_page.dart';
+import 'package:flutter_application_1/pages/home_page.dart';
+import 'package:flutter_application_1/pages/login_page.dart';
 
 void main() {
   // ignore: prefer_const_constructors
@@ -11,11 +12,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-    // ignore: prefer_const_constructors
     return MaterialApp(
-      // ignore: prefer_const_constructors
-      home: home_page(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      routes: {
+        "/": (context) => LoginPage(),
+        "/home": (context) => home_page(),
+        "/login": (context) => LoginPage()
+      },
     );
   }
 }
