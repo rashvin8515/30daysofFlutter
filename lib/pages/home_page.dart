@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/drawer.dart';
+
 // ignore: camel_case_types
 class home_page extends StatelessWidget {
   const home_page({Key? key}) : super(key: key);
@@ -16,7 +18,7 @@ class home_page extends StatelessWidget {
         child: Text("hello world $days"),
       ),
       // ignore: prefer_const_constructors
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
